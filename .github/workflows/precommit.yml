@@ -44,4 +44,5 @@ jobs:
             bundle-changed:
               - 'bundle/**'
       - if: steps.filter.outputs.bundle-changed == 'true'
-        run: make validate-bundle
+        run: |
+          make validate-bundle
